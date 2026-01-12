@@ -114,11 +114,11 @@ void send_email() {
     curl_easy_setopt(curl, CURLOPT_URL, "smtps://smtp.gmail.com:465");
     curl_easy_setopt(curl, CURLOPT_USE_SSL, CURLUSESSL_ALL);
 
-    curl_easy_setopt(curl, CURLOPT_USERNAME, "ambavkaruday@gmail.com");
-    curl_easy_setopt(curl, CURLOPT_PASSWORD, "ogit rncn mzlf zxnj");
+    curl_easy_setopt(curl, CURLOPT_USERNAME, "email");
+    curl_easy_setopt(curl, CURLOPT_PASSWORD, "test password");
 
-    curl_easy_setopt(curl, CURLOPT_MAIL_FROM, "<ambavkaruday@gmail.com>");
-    recipients = curl_slist_append(recipients, "<ambavkaruday@gmail.com>");
+    curl_easy_setopt(curl, CURLOPT_MAIL_FROM, "<email>");
+    recipients = curl_slist_append(recipients, "<email");
     curl_easy_setopt(curl, CURLOPT_MAIL_RCPT, recipients);
 
     
@@ -177,6 +177,7 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE, LPSTR, int) {
 
     return 0;
 }
+
 
 
 
